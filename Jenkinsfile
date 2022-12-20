@@ -1,5 +1,10 @@
 pipeline {
-    agent any 
+    agent any
+
+    environment {
+	    
+    }
+ 
     stages {
         stage('Build') { 
             steps {
@@ -17,6 +22,7 @@ pipeline {
         stage('Push'){
             steps {
                 sh 'echo "Pushing image to Dockerhub..."'
+		sh 'jenkins/push/push.sh $DOCKERHUB_PWD'
             }
         }
 
