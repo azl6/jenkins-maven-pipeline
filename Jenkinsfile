@@ -4,13 +4,14 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'echo "Building..."'
-		sh 'jenkins/build/build.sh'
+		sh 'mvn -DskipTests clean package'
 		 
             }
         }
         stage('Test') { 
             steps {
-                sh 'echo "Testing..."' 
+		sh 'echo "Testing..."'
+                sh 'mvn test'
             }
         }
         stage('Push'){
