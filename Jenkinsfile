@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-	    
+	DOCKERHUB_PWD=credentials(DOCKERHUB_PASSWORD)	    
     }
  
     stages {
