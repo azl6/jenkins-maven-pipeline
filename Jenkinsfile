@@ -29,7 +29,7 @@ pipeline {
         stage('Remove old application'){
             steps {
                 sshagent(['chaveEC2']) {
-                sh 'docker stop $(docker ps -aq)"'
+                sh 'docker stop $(docker ps -aq)'
                 }
             }
 	    }
