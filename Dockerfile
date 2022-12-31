@@ -2,6 +2,6 @@ FROM maven:3.8.6-eclipse-temurin-8-alpine
 
 WORKDIR /app
 
-COPY target/my-app-1.0-SNAPSHOT.jar /app
+COPY target/test-for-jenkins-0.0.1-SNAPSHOT /app
 
-CMD java -jar my-app-1.0-SNAPSHOT.jar
+CMD java -jar test-for-jenkins-0.0.1-SNAPSHOT
