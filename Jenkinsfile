@@ -26,6 +26,14 @@ pipeline {
             }
         }
 
+	stage('Remove old application'){
+		steps {
+		    sshagent(['e4fbd939-914a-41ed-92d9-8eededfb9243']) {
+            sh 'touch "/home/ec2-user/arquivo-$BUILD_TAG"'
+            }
+		}
+	}
+
         stage('Deploy') { 
             steps {
                 sh 'echo "Deploying..."' 
