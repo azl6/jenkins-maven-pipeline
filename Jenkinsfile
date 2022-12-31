@@ -29,7 +29,7 @@ pipeline {
         stage('Remove old application'){
             steps {
                 sshagent(['chaveEC2']) {
-                sh 'touch "/home/ec2-user/arquivo-$BUILD_TAG"'
+                sh 'docker stop $(docker ps -aq)"'
                 }
             }
 	    }
