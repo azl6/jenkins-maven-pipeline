@@ -39,6 +39,13 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh 'echo "Deploying..."' 
+
+                sshagent(['chaveEC2']) {
+                    sh """
+                       ssh ec2-user@ec2-54-207-226-81.sa-east-1.compute.amazonaws.com "docker run --rm -d azold6/jenkins-with-spring:$BUILD_TAG"
+                    """
+                }
+                
             }
         }
     }
