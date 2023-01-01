@@ -12,7 +12,7 @@ public class HelloController {
 
     @GetMapping
     public ResponseEntity<String> sayHello(){
-        return ResponseEntity.ok().body("Eu estou funcionando na versão 1.");
+        return ResponseEntity.ok().body("Eu fui atualizado para verificar se a pipeline está funcionando!!!");
     }
     
 }
