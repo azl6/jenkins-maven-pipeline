@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sshagent(['chaveEC2']) {
                     sh """
-                       ssh ec2-user@ec2-54-207-226-81.sa-east-1.compute.amazonaws.com "/home/ec2-user/remove.sh"
+                       ssh ec2-user@ec2-18-228-26-129.sa-east-1.compute.amazonaws.com "/home/ec2-user/remove.sh"
                     """
                 }
             }
