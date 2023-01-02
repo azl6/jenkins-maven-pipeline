@@ -12,7 +12,7 @@ public class HelloController {
 
     @GetMapping
     public ResponseEntity<String> sayHello(){
-        return ResponseEntity.ok().body("TESTANDO A PIPELINE!");
+        return ResponseEntity.ok().body("Mensagem base.");
     }
     
 }
