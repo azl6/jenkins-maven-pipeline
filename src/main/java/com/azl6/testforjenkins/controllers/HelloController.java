@@ -12,7 +12,7 @@ public class HelloController {
 
     @GetMapping
     public ResponseEntity<String> sayHello(){
-        return ResponseEntity.ok().body("Atualizei isso às 08:36AM do dia 03/2023! Esse será o meu último teste de hooks! Espero que funcione.");
+        return ResponseEntity.ok().body("ATUALIZANDO MENSAGEM PARA O VIDEO!");
     }
     
 }
