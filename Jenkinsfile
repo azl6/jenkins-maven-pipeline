@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sshagent(['chaveEC2']) {
                     sh """
-                       ssh ec2-user@18.228.26.129 "/home/ec2-user/remove.sh"
+                       ssh ec2-user@54.94.244.163 "/home/ec2-user/remove.sh"
                     """
                 }
             }
@@ -42,7 +42,7 @@ pipeline {
 
                 sshagent(['chaveEC2']) {
                     sh """
-                       ssh ec2-user@18.228.26.129 "docker run -p 8080:8081 --rm -d azold6/jenkins-with-spring:$BUILD_TAG"
+                       ssh ec2-user@54.94.244.163 "docker run -p 8080:8081 --rm -d azold6/jenkins-with-spring:$BUILD_TAG"
                     """
                 }
                 

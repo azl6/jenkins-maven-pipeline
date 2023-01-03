@@ -12,7 +12,7 @@ public class HelloController {
 
     @GetMapping
     public ResponseEntity<String> sayHello(){
-        return ResponseEntity.ok().body("ATUALIZANDO MENSAGEM!");
+        return ResponseEntity.ok().body("Atualizei isso às 05:52AM do dia 03/2023!");
     }
     
 }
